@@ -5,3 +5,6 @@
 
 override_dh_auto_build:
 	phpab --output src/autoload.php src
+
+execute_after_dh_install:
+	find debian/php-amphp-http-client -name "*.php" -exec chmod 0644 {} +;
