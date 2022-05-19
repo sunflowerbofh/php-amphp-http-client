@@ -22,7 +22,8 @@ Suggests:
 Replaces:
  ${phpcomposer:Debian-replace},
 Breaks:
- ${phpcomposer:Debian-conflict},
+ php-amphp-file (<< 0.2),
+ php-amphp-file (>= 3),
 Provides:
  ${phpcomposer:Debian-provide},
 Description: ${phpcomposer:description}
