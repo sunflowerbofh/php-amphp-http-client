@@ -1,0 +1,36 @@
+Source: amphp-http-client
+Section: php
+Priority: optional
+Maintainer: Katharina Drexel <katharina.drexel@bfh.ch>
+Build-Depends:
+ debhelper-compat (= 13),
+ phpab,
+ pkg-php-tools,
+Rules-Requires-Root: no
+Standards-Version: 4.6.1
+Homepage: https://github.com/amphp/http-client
+Vcs-Browser: https://github.com/sunflowerbofh/php-amphp-http-client
+Vcs-Git: https://github.com/sunflowerbofh/php-amphp-http-client.git
+
+Package: php-amphp-http-client
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${phpcomposer:Debian-require},
+Suggests:
+ ${phpcomposer:Debian-suggest},
+Replaces:
+ ${phpcomposer:Debian-replace},
+Breaks:
+ ${phpcomposer:Debian-conflict},
+Provides:
+ ${phpcomposer:Debian-provide},
+Description: ${phpcomposer:description}
+ Amp is a non-blocking concurrency framework for PHP. It provides an event loop,
+ promises and streams as a base for asynchronous programming.
+ .
+ This package provides an asynchronous HTTP client for PHP based on Amp.
+ Its API simplifies standards-compliant HTTP resource traversal and RESTful web
+ service consumption without obscuring the underlying protocol. The library
+ manually implements HTTP over TCP sockets; as such it has no dependency on
+ ext/curl.
